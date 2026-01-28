@@ -65,93 +65,65 @@
 		\maketitle
 		
 		\section{Question 1}
-		\textbf{Properties of image}
 		
-		Let $f: X \rightarrow Y$ and be a function and let $A_{1}, A_{2} \subseteq X$ be sets. Show that
-		
-		
-		\begin{equation*}
-			f\left(A_{1} \cap A_{2}\right) \subseteq f\left(A_{1}\right) \cap f\left(A_{2}\right) . \tag{1}
-		\end{equation*}
-		
-		
-		Moreover, give an example that in general there is no equality in (1). What happens if we additionally assume that $f$ is injective?
-		
+		If $(V,\|\cdot\|)$ is a normed vector space, prove that
+		\[
+		\|x-y\|\ge \bigl|\|x\|-\|y\|\bigr|\qquad \text{for all }x,y\in V.
+		\]
+		Using this, prove that if $\|\cdot\|'$ is another norm on $V$ for which there exists a constant $C>0$
+		such that
+		\[
+		\|v\|'\le C\|v\|\qquad \text{for all }v\in V,
+		\]
+		then the function
+		\[
+		\|\cdot\|' : (V,\|\cdot\|)\to \mathbb{R}_{\ge 0}
+		\]
+		is continuous. (This was an important step in the proof that all norms are equivalent in finite
+		dimensions we saw in Lecture 1).
 		
 		\textbf{Answer}
 		
 		\clearpage
 		
-		\section{Question 2}
+	
+	\section{Question 2}
+	In Lecture 1 we defined the subspace $c_0\subset (\ell^\infty,\|\cdot\|_\infty)$
+		of the space of bounded sequences equipped with sup norm, where
+		\[
+		c_0=\Bigl\{\text{sequences }\{a_n\}\text{ such that }\lim_{n\to\infty} a_n=0\Bigr\}.
+		\]
+		Prove that this subspace is closed.
 		
-		\textbf{Properties of pre-image}
-		
-		Let $f: X \rightarrow Y$ be a function and let $B_{1}, B_{2} \subseteq Y$ be sets. Show that
-		
-		\begin{enumerate}
-			\item $B_{1} \subseteq B_{2}$ implies that $f^{-1}\left(B_{1}\right) \subseteq f^{-1}\left(B_{2}\right)$.
-			\item $f\left(B_{1} \cup B_{2}\right)=f\left(B_{1}\right) \cup f\left(B_{2}\right)$.
-			\item $f\left(B_{1} \cap B_{2}\right)=f\left(B_{1}\right) \cap f\left(B_{2}\right)$.
-		\end{enumerate}
 		
 		\textbf{Answer}
 		
 		\clearpage
 		
 		\section{Question 3}
-		\textbf{Images and pre-images}
 		
-		Let $f: X \rightarrow Y$ and $A \subseteq X, B \subseteq Y$. Show that
+		In Lecture 1 we defined the norm $\|\cdot\|_{L^1}$ on the vector space
+		$C^0([0,1])$, where
+		\[
+		\|f\|_{L^1}=\int_0^1 |f(x)|\,dx.
+		\]
+		Prove that $(C^0([0,1]),\|\cdot\|_{L^1})$ is not a Banach space (a hint was given in class, see notes).
 		
-		\begin{enumerate}
-			\item $A \subseteq f^{-1}(f(A))$.
-			\item $f\left(f^{-1}(B)\right) \subseteq B$.
-		\end{enumerate}
-		
-		Give an example to show that in general there is no equality.
 		
 		\textbf{Answer}
 		
 		\clearpage
+		
 		\section{Question 4}
-		\textbf{Complement of sets}
 		
-		Let $A, B \subseteq X$ be sets. Show that
-		
+		We say that a metric space $(X,d)$ is \emph{separable} if there exists a subset
+		$S\subset X$ which is countable and dense. (For example, $\mathbb{R}$ is separable because
+		$\mathbb{Q}\subset \mathbb{R}$.)
 		\begin{enumerate}
-			\item $(A \cup B)^{C}=A^{C} \cap B^{C}$.
-			\item $(A \cap B)^{C}=A^{C} \cup B^{C}$.
-			\item If $A \subseteq B$, then $B^{C} \subseteq A^{C}$.
-		\end{enumerate}
-		
-		\textbf{Answer}
-		
-		\clearpage
-		\section{Question 5}
-		\textbf{Injective and surjective functions}
-		
-		Let $X=\{1,2,3\}$. Is there a function $f: X \rightarrow X$ which is injective but not surjective? Explain your answer.
-		
-		
-		\textbf{Answer}
-		
-		\vspace*{0.1\textheight}
-		
-		\section{Question 6}
-		
-		\textbf{Properties of real numbers}
-		
-		Using the axioms (A1)-(A4), (M1)-(M4), (D), (O1)-(O4), (OC1)-(OC2), (C) of the real numbers, show the following statements:
-		
-		\begin{enumerate}
-			\item The neutral element of addition is unique.
-			\item The additive inverse is unique.
-			\item The neutral element of multiplication is unique.
-			\item The multiplicative inverse is unique.
-			\item We have $-(-x)=x$.
-			\item Let $x \in \mathbb{R}$. Show that $x \geq 0$ if and only if $(-x) \leq 0$.
-			\item Let $x, y, u, v \in \mathbb{R}$ with $x \leq y$ and $u \leq v$. Show that $x+u \leq y+v$.
-			\item Let $x, y, z \in \mathbb{R}$ with $z>0$. Show that $x z \leq y z$ implies that $x \leq y$.
+			\item For a compact interval $I=[a,b]$, prove that $(C^0(I),\|\cdot\|_{C^0})$ is separable.
+			\item Prove that the space of bounded sequences $(\ell^\infty,\|\cdot\|_\infty)$ is not separable.
+			(Hint: look at sequences taking only the values $0$ and $1$, and use Cantor's diagonal argument
+			to prove that there's uncountably many of them.)
 		\end{enumerate}
 		
 		
@@ -160,23 +132,5 @@
 		\clearpage
 		
 		
-		\section{Question 7}
-		
-		\textbf{Existence of infimum}
-		
-		Let $X \subseteq \mathbb{R}$ be a non-empty set which is bounded from below. Show that the infimum of $X$ exists.
-		
-		\textbf{Answer}
-		
-		\vspace*{0.2\textheight}
-		
-		
-		\section{Question 8}
-		
-		\textbf{Equivalence of least upper bound property and completeness}
-		
-		Assume that ($\mathbb{R},+, \cdot, \leq$) satisfy the axioms (A1)-(A4), (M1)-(M4), (D), (O1)-(O4), (OC1)-(OC2). Moreover, suppose that the supremum of non-empty sets which are bounded from above exists. Show that $(\mathbb{R},+\cdot, \leq)$ also satisfies the completeness property (C).
-		
-		\textbf{Answer}
 		
 	\end{document}
