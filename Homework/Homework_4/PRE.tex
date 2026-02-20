@@ -1,0 +1,77 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{bbold}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,}
+\urlstyle{same}
+
+\title{HOMEWORK 4 MODERN ANALYSIS II - SPRING 2026 }
+
+\author{FRANCESCO LIN}
+\date{}
+
+
+%New command to display footnote whose markers will always be hidden
+\let\svthefootnote\thefootnote
+\newcommand\blfootnotetext[1]{%
+  \let\thefootnote\relax\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \let\thefootnote\svthefootnote%
+}
+
+%Overriding the \footnotetext command to hide the marker if its value is `0`
+\let\svfootnotetext\footnotetext
+\renewcommand\footnotetext[2][?]{%
+  \if\relax#1\relax%
+    \ifnum\value{footnote}=0\blfootnotetext{#2}\else\svfootnotetext{#2}\fi%
+  \else%
+    \if?#1\ifnum\value{footnote}=0\blfootnotetext{#2}\else\svfootnotetext{#2}\fi%
+    \else\svfootnotetext[#1]{#2}\fi%
+  \fi
+}
+
+\begin{document}
+\maketitle
+Problem 1. Prove that
+
+$$
+\sum_{n=1}^{\infty} \frac{1}{n^{4}}=\frac{\pi^{4}}{90}
+$$
+
+by considering the Fourier series of the $2 \pi$-periodic function $f$ such that $f(x)=|x|$ for $x \in[-\pi, \pi]$. (This is called the triangle wave).
+
+Problem 2. Fix $f \in C^{0}(\mathbb{T})$, and consider the operator
+
+$$
+\begin{aligned}
+M_{f}:\left(C^{0}(\mathbb{T}),\|\cdot\|_{L^{2}}\right) & \rightarrow\left(C^{0}(\mathbb{T}),\|\cdot\|_{L^{2}}\right) \\
+g & \mapsto f g .
+\end{aligned}
+$$
+
+Prove that this operator is bounded, and has operator norm $\left\|M_{f}\right\|_{\text {op }}=\|f\|_{C^{0}}$.\\
+Recall that we showed in Lecture 7 that the Fourier coefficients of a function $f \in C^{0}(\mathbb{T})$ satisfy
+
+
+\begin{equation*}
+|\hat{f}(n)|=o(1 / n) \quad \text { if } f \text { is } C^{1} \tag{1}
+\end{equation*}
+
+
+The following two exercises address other relations between local behavior and decay.\\
+Problem 3. Prove that if $f$ is only assumed to be Lipschitz, one can conclude $|\hat{f}(n)|= O(1 / n)$ (i.e. there exists $C>0$ such that $|\hat{f}(n)| \leqslant C / n$ for all $n \neq 0$ ). (For a hint, see Stein-Shakarchi vol I Exercise 15 on p. 91-92).
+
+Problem 4. As a partial converse to (1), prove that any sequence $a_{n}$ such that $\left|a_{n}\right|= O\left(\frac{1}{n^{2+\varepsilon}}\right)$ for some $\varepsilon>0$ is the Fourier series of a $C^{1}$ function. 1 Hint: you might need some results about uniform convergence of derivatives from Modern Analysis I, which you can find for example in Ch. 7 of Baby Rudin.
+
+Department of Mathematics, Columbia University\\
+E-mail address: \href{mailto:f12550@columbia.edu}{f12550@columbia.edu}
+
+\footnotetext{${ }^{1}$ Problem 1 shows that you cannot take $\varepsilon=0$; it is a open problem for any $k \in \mathbb{N}$ to give a reasonable characterization of which sequences can arise as Fourier coefficients of $C^{k}$ functions.
+}
+\end{document}
